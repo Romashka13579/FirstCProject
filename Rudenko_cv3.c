@@ -1,8 +1,12 @@
 #include <stdio.h>
 
+void clearbuffer() {
+    while ((getchar()) != '\n');
+}
+
 void cv3_prva(){
     int n;
-    float zap, max = 0, poc;
+    float zap = 0, max = 0, poc;
     printf("Zadajte pocet realnych cisel: ");
     scanf("%d", &n);
     for(int i = 0; i<n; i++){
@@ -47,6 +51,10 @@ void cv3_tretia(){
 
 int main()
 {
+     cv3_prva();
+     clearbuffer();
+      cv3_druha();
+      clearbuffer();
     cv3_tretia();
     return 0;
 }
