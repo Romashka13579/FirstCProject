@@ -97,6 +97,11 @@ int cv2_siesta(){
     return 0;
 }
 
+int cv2_sedma(){
+
+    return 0;
+}
+
 int main()
 {
     /*cv2_prva();

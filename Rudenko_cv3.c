@@ -4,7 +4,7 @@ void clearbuffer() {
     while ((getchar()) != '\n');
 }
 
-void cv3_prva(){
+int cv3_prva(){
     int n;
     float zap = 0, max = 0, poc;
     printf("Zadajte pocet realnych cisel: ");
@@ -20,10 +20,11 @@ void cv3_prva(){
     printf("Primer zapornych: %g\n", zap);
         printf("Maximum z kladnych: %.2f\n", max);
             printf("Pocet v rozsahu: %g\n", poc);
+    return 0;
 }
 
 
-void cv3_druha(){
+int cv3_druha(){
     int male=0, velke=0, cisla=0;
     char c;
     printf("Zadajte retazec: ");
@@ -35,9 +36,10 @@ void cv3_druha(){
     printf("Male: %d\n", male);
         printf("Velke: %d\n", velke);
             printf("Cisla: %d\n", cisla);
+    return 0;
 }
 
-void cv3_tretia(){
+int cv3_tretia(){
     int F, G, D;
     printf("Zadajte hranice intervalu a delitel: ");
     scanf("%d %d %d", &F, &G, &D);
@@ -47,6 +49,7 @@ void cv3_tretia(){
             printf("%d ", i);
         }
     }
+    return 0;
 }
 
 int cv3_stvrta(){
@@ -58,6 +61,7 @@ int cv3_stvrta(){
         }
         printf("\n");
     }
+    return 0;
 }
 
 int cv3_piata(){
@@ -67,12 +71,14 @@ int cv3_piata(){
         for(int j=0; j<N; j++){
             if((i == 0 || j == 0) || (i == N-1 || j == N-1)){
                 printf("+ ");
+            }
             else{
                 printf("* ");
             }
         }
         printf("\n");
     }
+    return 0;
 }
 
 int cv3_siesta(){
@@ -89,11 +95,12 @@ int cv3_siesta(){
         }
         printf("\n");
     }
+    return 0;
 }
 
 int main()
 {
-    /*cv3_prva();
+    cv3_prva();
     clearbuffer();
     cv3_druha();
     clearbuffer();
@@ -102,7 +109,7 @@ int main()
     cv3_stvrta();
     clearbuffer();
     cv3_piata();
-    clearbuffer();*/
+    clearbuffer();
     cv3_siesta();
     clearbuffer();
     return 0;
