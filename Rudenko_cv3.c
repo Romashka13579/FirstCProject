@@ -49,6 +49,12 @@ void cv3_tretia(){
     }
 }
 
+int cv3_stvrta(){
+    int N;
+    scanf("%d", &N);
+    for
+}
+
 int main()
 {
      cv3_prva();
