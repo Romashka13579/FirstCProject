@@ -52,15 +52,58 @@ void cv3_tretia(){
 int cv3_stvrta(){
     int N;
     scanf("%d", &N);
-    for
+    for(int i=0; i<N; i++){
+        for(int j=0; j<N; j++){
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+int cv3_piata(){
+    int N;
+    scanf("%d", &N);
+    for(int i=0; i<N; i++){
+        for(int j=0; j<N; j++){
+            if((i == 0 || j == 0) || (i == N-1 || j == N-1)){
+                printf("+ ");
+            else{
+                printf("* ");
+            }
+        }
+        printf("\n");
+    }
+}
+
+int cv3_siesta(){
+    int N;
+    scanf("%d", &N);
+    for(int i=0; i<N; i++){
+        for(int j=0; j<N; j++){
+            if((i+j)%2 == 0){
+                printf("* ");
+            }
+            else{
+                printf("+ ");
+            }
+        }
+        printf("\n");
+    }
 }
 
 int main()
 {
-     cv3_prva();
-     clearbuffer();
-      cv3_druha();
-      clearbuffer();
+    /*cv3_prva();
+    clearbuffer();
+    cv3_druha();
+    clearbuffer();
     cv3_tretia();
+    clearbuffer();
+    cv3_stvrta();
+    clearbuffer();
+    cv3_piata();
+    clearbuffer();*/
+    cv3_siesta();
+    clearbuffer();
     return 0;
 }
