@@ -87,14 +87,48 @@ int cv4_stvrte(){
 }
 
 int cv4_piate(){
-    int n, sum = 0, sum0;
+
+  int n;
+
+  printf("zadajte cislo: ");
+  scanf("%d", &n);
+
+  int sum = 0, sum0 = 0;
+  for (int i=1; i<=n; i++) {
+    sum += i;
+    if (sum % 3 == 0) sum0 = sum;
+  }
+  printf("%d", sum0);
+}
+
+int cv4_sieste(){
+    int n, k;
 
     scanf("%d", &n);
-    for(int i = 1; i<=n; i++){
-        sum = sum+i;
-        if(sum%3 == 0){sum0 = sum;}
+    if(n%2 == 1 && n>=1 && n<=15){
+         for(int i = 1; i<=(2*n-1); i++){
+        for(int j = 1; j<=n; j++){
+            k = i>n ? 2*n-i : i;
+            printf("%c ", k<j ? '-':'*');
+        }
+        printf("\n");
     }
-    printf("%d", sum0)
+    }
+}
+
+int cv4_sedme(){
+    int n, k;
+
+    scanf("%d", &n);
+    if(n%2 == 1 && n>=1 && n<=15){
+        for(int i = 1; i<=n; i++){
+            for(int j = 1; j<=n; j++){
+                if(i==j || i+j == n+1 || i == (n+1)/2 || j == (n+1)/2) printf("* ");
+                else printf("- ");
+            }
+            printf("\n");
+        }
+    }
 }
 
 int main(){
@@ -105,6 +139,12 @@ int main(){
     cv4_tretie();
     clearbuffer();
     cv4_stvrte();
+    clearbuffer();
+    cv4_piate();
+    clearbuffer();
+    cv4_sieste();
     clearbuffer();*/
+    cv4_sedme();
+    clearbuffer();
     return 0;
 }
