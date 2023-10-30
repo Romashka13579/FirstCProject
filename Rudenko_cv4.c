@@ -131,6 +131,23 @@ int cv4_sedme(){
     }
 }
 
+int cv4_osme(){
+    int n, v;
+
+    scanf("%d %d", &n, &v);
+    if(v>=1 && n<=15 && v>=1 && v<=5 && n%2==1){
+        for(int i=1; i<=v; i++){
+            for(int j=1; j<=(2*n-1); j++){
+                for(int l=1; l<=(2*n-1); l++){
+                    if(j==l || j+l == 2*n || j==n || l==n) printf("* ");
+                    else printf("- ");
+                }
+                printf("\n");
+            }
+        }
+    }
+}
+
 int main(){
     /*cv4_prve();
     clearbuffer();
@@ -143,8 +160,10 @@ int main(){
     cv4_piate();
     clearbuffer();
     cv4_sieste();
-    clearbuffer();*/
+    clearbuffer();
     cv4_sedme();
+    clearbuffer();*/
+    cv4_osme();
     clearbuffer();
     return 0;
 }
