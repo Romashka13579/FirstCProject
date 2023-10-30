@@ -20,13 +20,16 @@ int cv5_druhe(){
     FILE *ffile;
     char c;
     ffile = fopen("cisla.txt", "r");
-    fscanf("%d %d")
+    while(c = getc(ffile) != EOF){
+            printf("%s ", c);
+    }
+    fclose(ffile);
 }
 
 int main()
 {
-    cv5_prve();
-    clearbuffer();
+    /*cv5_prve();
+    clearbuffer();*/
     cv5_druhe();
     clearbuffer();
     return 0;
