@@ -18,10 +18,10 @@ int cv5_prve(){
 
 int cv5_druhe(){
     FILE *ffile;
-    char c;
+    int c;
     ffile = fopen("cisla.txt", "r");
-    while(c = getc(ffile) != EOF){
-            printf("%s ", c);
+    while((c = getc(ffile)) != EOF){
+            printf("%d ", c);
     }
     fclose(ffile);
 }
